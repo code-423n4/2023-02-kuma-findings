@@ -1,0 +1,8 @@
+{
+  "contest": 217,
+  "handle": "hihen",
+  "risk": "3",
+  "title": "KIBToken._transfer() did not correctly handle the case where from is the same as to",
+  "issueId": 8,
+  "issueUrl": "https://github.com/code-423n4/2023-02-kuma-findings/issues/8"
+}
