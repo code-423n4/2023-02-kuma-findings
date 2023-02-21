@@ -90,6 +90,14 @@ The `Blacklist::blacklist` and `Blacklist::unBlacklist` functions do not ensure 
 
 The `KYCToken::mint` function accepts a `kycData` argument that is meant to contain data about a KYC'd person. The `kycData` contains an `owner` argument that does not appear to be sanitized, permitting KYC data to be minted to an arbitrary `to` address when the `owner` of the `kycData` may be someone else. We advise the `mint` function to permit minting of the `kycData` by either enforcing `to` to equal the data's `owner` member or by not accepting a `to` argument altogether, minting the `kycData` directly to its `owner`.
 
+## `KUMABondToken.sol`
+
+### KBT-01L: Potential Approval Blacklist Bypass (Affected Lines: [L148](https://github.com/code-423n4/2023-02-kuma/blob/main/src/mcag-contracts/KUMABondToken.sol#L148))
+
+The `KUMABondToken::approve` function will apply a blacklist check on the `to` as well as `msg.sender` contextual arguments of the call, however, the actual `owner` of the `tokenId` is not validated in contrast to `setApprovalForAll` which disallows an approval to be made by a party that is in the blacklist.
+
+While the approval cannot be actuated on by the `transferFrom` / `safeTransferFrom` functions as they do validate the `from` argument, an approval being made on behalf of a blacklisted owner is an undesirable trait. We advise the code to properly apply the blacklist to the `owner` of the `ERC721` asset, preventing circumvention of the checks if an operator (i.e. `isApprovedForAll`) was created by a blacklisted owner before they were included in the blacklist.
+
 ## `MCAGAggregator.sol`
 
 ### MAR-01L: Inexistent Sanitization of Maximum Answer (Affected Lines: [L69-L72](https://github.com/code-423n4/2023-02-kuma/blob/main/src/mcag-contracts/MCAGAggregator.sol#L69-L72)) 
