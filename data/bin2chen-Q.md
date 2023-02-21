@@ -111,7 +111,7 @@ if epochLength > _epochLength then refreshed and then resetting epochLength
     }
 ```
 
-But epochLength < _epochLength is also possible for the previousEpochTimestamp to be shifted back, because the time is calculated by taking the modulus.
+But epochLength < _epochLength is also possible for the previousEpochTimestamp to be shifted back, because the time is calculated by ```block.timestamp % epochLength```
 So it is recommended to remove the epochLength > _epochLength limit:
 
 ```solidity
