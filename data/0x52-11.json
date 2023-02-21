@@ -1,0 +1,8 @@
+{
+  "contest": 217,
+  "handle": "0x52",
+  "risk": "2",
+  "title": "Price feed in MCAGRateFeed#getRate is not sufficiently validated and can return stale price",
+  "issueId": 11,
+  "issueUrl": "https://github.com/code-423n4/2023-02-kuma-findings/issues/11"
+}
