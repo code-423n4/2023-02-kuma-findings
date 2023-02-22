@@ -1,0 +1,8 @@
+{
+  "contest": 217,
+  "handle": "hihen",
+  "risk": "2",
+  "title": "KUMAFeeCollector may emit wrong FeeReleased event",
+  "issueId": 23,
+  "issueUrl": "https://github.com/code-423n4/2023-02-kuma-findings/issues/23"
+}
