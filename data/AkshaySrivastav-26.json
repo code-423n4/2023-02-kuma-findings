@@ -1,0 +1,8 @@
+{
+  "contest": 217,
+  "handle": "AkshaySrivastav",
+  "risk": "2",
+  "title": "KIBToken: `setEpochLength` & `refreshYield` will revert until first epoch",
+  "issueId": 26,
+  "issueUrl": "https://github.com/code-423n4/2023-02-kuma-findings/issues/26"
+}
