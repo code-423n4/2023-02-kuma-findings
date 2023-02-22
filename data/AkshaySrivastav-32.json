@@ -1,0 +1,8 @@
+{
+  "contest": 217,
+  "handle": "AkshaySrivastav",
+  "risk": "2",
+  "title": "Multiple KBCTokens can be minted fir single KUMABondToken id.",
+  "issueId": 32,
+  "issueUrl": "https://github.com/code-423n4/2023-02-kuma-findings/issues/32"
+}
