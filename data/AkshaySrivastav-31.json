@@ -1,0 +1,8 @@
+{
+  "contest": 217,
+  "handle": "AkshaySrivastav",
+  "risk": "2",
+  "title": "Bonds can be sold as soon as the contract is initialized hence bypassing the fees",
+  "issueId": 31,
+  "issueUrl": "https://github.com/code-423n4/2023-02-kuma-findings/issues/31"
+}
